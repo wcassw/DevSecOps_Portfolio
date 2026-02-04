@@ -7,13 +7,13 @@ variable "aws_region" {
 variable "state_bucket_name" {
   description = "S3 bucket name for Terraform state"
   type        = string
-  default     = "DevSecOps_Portfolio-tfstate-bucket"
+  default     = "DevSecOps-Portfolio-tfstate-bucket"
 }
 
 variable "dynamodb_table_name" {
   description = "DynamoDB table name for state locking"
   type        = string
-  default     = "DevSecOps_Portfolio-tfstate-lock"
+  default     = "DevSecOps-Portfolio-tfstate-lock"
 }
 
 variable "environment" {
@@ -25,5 +25,5 @@ variable "environment" {
 variable "project_name" {
   description = "Project name"
   type        = string
-  default     = "DevSecOps_Portfolio"
+  default     = "DevSecOps-Portfolio"
 }
