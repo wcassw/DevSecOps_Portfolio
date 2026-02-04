@@ -16,17 +16,17 @@ A production-grade Kubernetes infrastructure demonstrating modern DevSecOps prac
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                              AWS VPC (10.0.0.0/16)                          │
-│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  ┌──────────────────────────────────────────────────────────────────────┐   │
 │  │                        Private Subnet (10.0.1.0/24)                  │   │
-│  │                                                                       │   │
-│  │   ┌─────────────┐    ┌─────────────┐    ┌─────────────┐             │   │
-│  │   │  k8s-master │    │ k8s-worker1 │    │ k8s-worker2 │             │   │
-│  │   │  (t3.medium)│    │ (t3.medium) │    │ (t3.medium) │             │   │
-│  │   │             │    │             │    │             │             │   │
-│  │   │ • API Server│    │ • Workloads │    │ • Workloads │             │   │
-│  │   │ • etcd      │    │ • ArgoCD    │    │ • Vault     │             │   │
-│  │   │ • Scheduler │    │ • Traefik   │    │ • Monitoring│             │   │
-│  │   └──────┬──────┘    └──────┬──────┘    └──────┬──────┘             │   │
+│  │                                                                      │   │
+│  │   ┌─────────────┐    ┌─────────────┐    ┌─────────────┐              │   │
+│  │   │  k8s-master │    │ k8s-worker1 │    │ k8s-worker2 │              │   │
+│  │   │  (t3.medium)│    │ (t3.medium) │    │ (t3.medium) │              │   │
+│  │   │             │    │             │    │             │              │   │
+│  │   │ • API Server│    │ • Workloads │    │ • Workloads │              │   │
+│  │   │ • etcd      │    │ • ArgoCD    │    │ • Vault     │              │   │
+│  │   │ • Scheduler │    │ • Traefik   │    │ • Monitoring│              │   │
+│  │   └──────┬──────┘    └──────┬──────┘    └──────┬──────┘              │   │
 │  │          │                  │                  │                     │   │
 │  │          └──────────────────┼──────────────────┘                     │   │
 │  │                             │                                        │   │
